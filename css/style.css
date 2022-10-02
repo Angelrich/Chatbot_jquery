@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: white;
+    color: #222;
+    margin: 0;
+}
+
+h1 {
+    margin: 10;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+    background-color: #fafafa;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 50px;
+    
+}
+
+.container img {
+    width: 25%;
+    border-radius: 5%;
+    
+}
+
+.btn {
+    background-color: skyblue;
+    padding: 7px;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    margin-left: 200px;
+    cursor: pointer;
+}
+
+.btn:focus {
+    outline: 0;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.chat_icon {
+    position: fixed;
+    right: 30px;
+    bottom: 0;
+    font-size: 70px;
+    color: rgb(112, 186, 242);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.chat_box {
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    width: 400px;
+    height: 80vh;
+    background: #dedede;
+    z-index:1000;
+    transition: all 0.3s ease-out;
+    transform: scaleY(0);
+}
+
+.chat_box.active {
+    transform: scaleY(1);
+}
+
+.hidden {
+    display: none;
+}
+
+.conv-form-wrapper textarea{
+    overflow: hidden;
+    height: 30px;
+    resize: none;
+}
+
+#messages {
+    padding: 20px;
+}

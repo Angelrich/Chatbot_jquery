@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Take-out</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jquery.convform.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to Elite Take-out</h1>
+        <img src="food.jpg" alt="salad" />
+        <div class="description">
+            <dl>
+                <dt>Name: Italian Salad</dt>
+                <dt>Price: 10$</dt>
+                <dt>Delivery Time: 20 mins</dt>
+            </dl>
+        </div>
+        <button class="btn">Take Out</button>
+        <!-- Chatbot -->
+        <div class="chat_icon">
+            <i class="fa-solid fa-comments"></i>
+        </div>
+        <div class="chat_box">
+            <div id="chat" class="conv-form-wrapper">
+                <form action="" method="GET" class="hidden">
+                    <select name="order"
+                        data-conv-question="Hello! Have a problem in ordering?">
+                        <option value="price">Total Price</option>
+                        <option value="quantity">Quantity</option>
+                    </select>
+                    <div data-conv-fork="order">
+                        <div data-conv-case="price">
+                            <input type="text" name="price_name" data-conv-question="Please type your problem">
+                        </div>
+                        <div data-conv-case="quantity">
+                            <input type="text" name="quantity_name" data-conv-question="Please type your problem">
+                        </div>
+                    </div>
+                        <input type="text" name="name" data-conv-question="Please enter your name">
+                        <input data-conv-question="Please enter your email"
+                            data-pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" id="email"
+                            type="email" name="email" required placeholder="What's your e-mail?">
+                        <select data-conv-question="Confirm?">
+                            <option value="confirm">Confirm</option>
+                        </select>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="js/jquery.convform.js"></script>
